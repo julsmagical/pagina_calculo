@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team JCG - Optimización de Cultivos</title>
+    <link href="https://fonts.googleapis.com/css?family=Rajdhani:300,400,500,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+    <link rel="stylesheet" href="styleFINAL.css">
+</head>
+<body>
+
+<!-- Header -->
+<header class="navbar">
+    <div class="logo">
+        <img src="image_logoJCG.png" alt="Logo">
+    </div>
+    <nav class="nav-links">
+        <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#educacion">Educación</a></li>
+            <li><a href="#cambio-climatico">Cambio Climático</a></li>
+            <li><a href="#visualizacion-climatico">Simulaciones Climáticas</a></li>
+            <li><a href="#sobre-nosotros">Sobre Nosotros</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+    </nav>
+</header>
+
+    <!--seccion de inicio-->
+    <section id="inicio" class="inicio">
+        <div class="container">
+            <h1>Bienvenidos a Optimización de Cultivos</h1>
+            <p>Explora cómo las matemáticas y la tecnología pueden transformar la agricultura, mejorando la producción y adaptándola al cambio climático.</p>
+            <div class="intro-buttons">
+                <a href="#educacion" class="btn">Explorar Educación</a>
+                <a href="#cambio-climatico" class="btn">Ver Cambio Climático</a>
+            </div>
+        </div>
+    </section>
+
+     <!-- Educación Section -->
+      <section id="educacion" class="section">
+        <div class="container">
+            <h3 class="section_title">Educación y Agricultura</h3>
+            <p class="section_text">Aprende cómo las derivadas pueden mejorar tus cultivos y tus resultados. Este espacio está diseñado para educarte en el uso de la matemática para mejorar la eficiencia agrícola.</p>
+    
+            <!-- Tarjetas con contenido educativo -->
+            <div class="card-container">
+                <div class="card">
+                    <img src="image1.png" alt="Cálculo de Derivadas">
+                    <h4 class="card-title">Cálculo de Derivadas</h4>
+                        <p class="card-description">Aprende a usar las derivadas para optimizar los cultivos y aumentar la producción. Explicamos los conceptos básicos y avanzados aplicados a la agricultura.</p>
+                </div>
+                <div class="card">
+                    <img src="image2.jpg" alt="Optimización Climática">
+                    <h4 class="card-title">Optimización Climática</h4>
+                        <p class="card-description">Descubre cómo el cambio climático impacta la agricultura y cómo podemos usar las matemáticas para adaptarnos a estos cambios y optimizar el crecimiento de los cultivos.</p>
+                </div>
+            </div>
+        </div>
+        </section>
+
+    <!-- Cambio Climático Section -->
+    <section id="cambio-climatico" class="section">
+        <div class="container">
+            <h3 class="section_title">Cambio Climático y Agricultura</h3>
+            <p class="section_text">La agricultura enfrenta grandes desafíos debido al cambio climático. Aquí te mostramos cómo abordarlos y adaptarnos a las nuevas condiciones climáticas.</p>
+
+            <!-- Información sobre Cambio Climático -->
+            <ul>
+                <li>Impactos del cambio climático en los cultivos, como sequías y temperaturas extremas.</li>
+                <li>Adaptación a nuevas condiciones climáticas mediante prácticas agrícolas sostenibles.</li>
+                <li>Uso de tecnología y herramientas matemáticas para optimizar el manejo agrícola en un clima cambiante.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Calculadora Section -->
+    <section id="calculadora" class="section">
+        <div class="container">
+            <h3 class="section_title">Calculadora de Derivadas para la Agricultura</h3>
+            <p class="section_text">Usa nuestra herramienta para optimizar el rendimiento de tus cultivos a través del cálculo de derivadas.</p>
+
+            <!-- Formulario de la calculadora -->
+            <form action="#" method="post">
+                <div class="form-group">
+                    <label for="inputX">Valor de X (por ejemplo, tiempo o cantidad de agua):</label>
+                    <input type="number" id="inputX" name="inputX" required>
+                </div>
+                <div class="form-group">
+                    <label for="inputY">Valor de Y (por ejemplo, producción del cultivo):</label>
+                    <input type="number" id="inputY" name="inputY" required>
+                </div>
+                <button type="submit">Calcular</button>
+            </form>
+
+            <!-- Resultados -->
+            <div id="resultado">
+                <h4>Resultados:</h4>
+                <p>Aquí se mostrarán los resultados de los cálculos.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Visualización de Cambios Climáticos Section -->
+    <section id="visualizacion-climatico" class="section">
+        <div class="container">
+            <h3 class="section_title">Simulaciones de Cambio Climático</h3>
+            <p class="section_text">Visualiza cómo los cambios climáticos pueden afectar a la agricultura. Utiliza nuestras simulaciones para entender mejor las variaciones de temperatura y precipitación en diferentes regiones.</p>
+            
+            <!-- Simulación de Cambios Climáticos -->
+            <div class="simulador">
+                <p>Elige los parámetros para visualizar las simulaciones:</p>
+                <label for="temperatura">Temperatura (°C):</label>
+                <input type="range" id="temperatura" min="0" max="50" value="25" onchange="actualizarSimulacion()">
+                <p>Precipitación (mm):</p>
+                <input type="range" id="precipitacion" min="0" max="500" value="200" onchange="actualizarSimulacion()">
+                <div id="simulacion-resultados">
+                    <p><strong>Temperatura:</strong> <span id="temp-display">25°C</span></p>
+                    <p><strong>Precipitación:</strong> <span id="precip-display">200mm</span></p>
+                    <p><strong>Efecto en cultivos:</strong> <span id="efecto-cultivos">Simulación en curso...</span></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre Nosotros Section -->
+    <section id="sobre-nosotros" class="section">
+        <div class="container">
+            <h3 class="section_title">Sobre Nosotros</h3>
+            <p class="section_text">Somos un equipo apasionado por la tecnología y la agricultura. Nuestra misión es ayudar a los agricultores mediante herramientas matemáticas y tecnológicas que optimicen su producción, considerando también los efectos del cambio climático.</p>
+
+            <div class="team">
+                <div class="team-member">
+                    <img src="team1.jpg" alt="Clara Guamán">
+                    <h4>Clara Guamán</h4>
+                    <p>Líder del grupo</p>
+                </div>
+                <div class="team-member">
+                    <img src="team2.jpg" alt="Juliet Morales">
+                    <h4>Juliet Morales</h4>
+                    <p>Integrante encargada del desarrollo Web</p>
+                <div class="team-member">
+                    <img src="team3.jpg" alt="Gabriel Caicedo">
+                    <h4>Gabriel Caicedo</h4>
+                    <p><p>Integrante encargado de las entrevistas y documentos</p></p>
+                </div>
+                <div class="team-member">
+                    <img src="team4.jpg" alt="Glenda Torres">
+                    <h4>Glenda Torres</h4>
+                    <p>Integrante encargada de la investigación</p>
+                </div>
+                <div class="team-member">
+                    <img src="team5.jpg" alt="Elkyn Ponce">
+                    <h4>Elkyn Ponce</h4>
+                    <p>Integrante encargado del marco conceptual</p>
+                </div>
+    </section>
+    
+    <!-- Contacto Section -->
+    <section id="contacto" class="section">
+        <div class="container">
+            <h3 class="section_title">Contacto</h3>
+            <p class="section_text">Si tienes alguna pregunta o deseas saber más, no dudes en contactarnos. Estamos aquí para ayudarte a optimizar tus cultivos.</p>
+
+            <form action="submit_form.php" method="POST">
+                <div class="form-group">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Correo Electrónico:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="mensaje">Mensaje:</label>
+                    <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+                </div>
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer_section">
+        <p>&copy; 2025 Optimización de Cultivos. Universidad de Guayaquil</p>
+        <p>Facultad de Ciencias Matematicas y Fisicas</p>
+    </footer>
+
+</body>
+</html> 
